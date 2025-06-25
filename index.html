@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manos Bolivianas - Tienda de Artesanía Boliviana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Manos Bolivianas: Tu Tienda en Línea de Productos Artesanales</h1>
+        <p>Apoyando el arte y la tradición de Bolivia</p>
+    </header>
+
+    <div class="container">
+        <section id="bolivian-hands-store" class="section-box store-preview">
+            <h2>Explora Nuestros Productos Artesanales</h2>
+            <div class="store-layout">
+                <div class="product-card">
+                    <img src="assets/images/tejido_andino.jpg" alt="Tejido Andino">
+                    <h3>Tejido de Alpaca Ancestral</h3>
+                    <p>Hermoso tejido artesanal andino, cálido, suave y con diseños únicos que reflejan la rica cultura boliviana.</p>
+                    <span class="price">Bs. 150</span>
+                    <button class="view-product-btn" data-product-id="1">Ver Producto</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/joyeria_plata.jpg" alt="Joyería en Plata">
+                    <h3>Aretes de Plata Pura 950</h3>
+                    <p>Diseño exclusivo y elegante, elaborados a mano con plata 950 boliviana. Perfectos para cualquier ocasión.</p>
+                    <span class="price">Bs. 220</span>
+                    <button class="view-product-btn" data-product-id="2">Ver Producto</button>
+                </div>
+                 <div class="product-card">
+                    <img src="assets/images/ceramica_tradicional.jpg" alt="Cerámica Tradicional">
+                    <h3>Vasija de Cerámica Tradicional</h3>
+                    <p>Pieza única de cerámica con motivos ancestrales, ideal para la decoración de tu hogar o como regalo especial.</p>
+                    <span class="price">Bs. 90</span>
+                    <button class="view-product-btn" data-product-id="3">Ver Producto</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/tejido_andino.jpg" alt="Poncho Tejido">
+                    <h3>Poncho de Lana de Llama</h3>
+                    <p>Cálido y auténtico poncho tejido a mano, ideal para el frío y para lucir el arte boliviano.</p>
+                    <span class="price">Bs. 300</span>
+                    <button class="view-product-btn" data-product-id="4">Ver Producto</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/joyeria_plata.jpg" alt="Anillo Plata">
+                    <h3>Anillo de Plata con Turquesa</h3>
+                    <p>Delicado anillo de plata con incrustación de turquesa, una joya que destaca por su belleza natural.</p>
+                    <span class="price">Bs. 180</span>
+                    <button class="view-product-btn" data-product-id="5">Ver Producto</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/ceramica_tradicional.jpg" alt="Plato Cerámica">
+                    <h3>Plato Decorativo de Arcilla</h3>
+                    <p>Plato artesanal con detalles pintados a mano, perfecto para dar un toque cultural a tu mesa.</p>
+                    <span class="price">Bs. 60</span>
+                    <button class="view-product-btn" data-product-id="6">Ver Producto</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>Panel del Artesano (Acceso Restringido)</h2>
+            <p>Aquí, los artesanos gestionan sus productos y pedidos.</p>
+            <div class="artisan-panel">
+                <div class="panel-item">
+                    <h4>Mis Productos</h4>
+                    <p>Agrega, edita y elimina tus productos del catálogo de la tienda.</p>
+                    <button id="btn-manage-products">Gestionar Productos</button>
+                </div>
+                <div class="panel-item">
+                    <h4>Mis Pedidos</h4>
+                    <p>Revisa tus pedidos, actualiza estados y gestiona tus ventas.</p>
+                    <button id="btn-view-orders">Ver Pedidos</button>
+                </div>
+                <div class="panel-item">
+                    <h4>Mi Perfil</h4>
+                    <p>Actualiza tu información personal y datos de contacto.</p>
+                    <button>Editar Perfil</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Manos Bolivianas - Todos los derechos reservados.</p>
+        <p>Ubicación actual: Potosí, Bolivia.</p>
+    </footer>
+
+    <div id="product-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-product-image" src="" alt="Imagen del producto">
+            <h3 id="modal-product-name"></h3>
+            <p id="modal-product-description"></p>
+            <span id="modal-product-price" class="price"></span>
+            <button class="add-to-cart-btn">Añadir al Carrito (Simulación)</button>
+        </div>
+    </div>
+
+    <div id="artisan-products-management" class="full-page-section hidden">
+        <button class="back-to-store-btn">&larr; Volver a la Tienda</button>
+        <h2>Gestión de Mis Productos</h2>
+        <p>Aquí puedes añadir, editar o eliminar los productos de tu catálogo.</p>
+        <div class="management-controls">
+            <button class="add-new-item-btn">Añadir Nuevo Producto</button>
+        </div>
+        <div class="product-list">
+            <div class="management-card">
+                <img src="assets/images/tejido_andino.jpg" alt="Tejido Alpaca">
+                <div>
+                    <h4>Tejido de Alpaca #101</h4>
+                    <p>Descripción corta del tejido de alpaca.</p>
+                    <p>Precio: Bs. 150 | Stock: 10</p>
+                </div>
+                <div class="card-actions">
+                    <button class="edit-btn">Editar</button>
+                    <button class="delete-btn">Eliminar</button>
+                </div>
+            </div>
+            <div class="management-card">
+                <img src="assets/images/joyeria_plata.jpg" alt="Aretes Plata">
+                <div>
+                    <h4>Aretes de Plata #205</h4>
+                    <p>Descripción corta de los aretes de plata.</p>
+                    <p>Precio: Bs. 220 | Stock: 5</p>
+                </div>
+                <div class="card-actions">
+                    <button class="edit-btn">Editar</button>
+                    <button class="delete-btn">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="artisan-orders-management" class="full-page-section hidden">
+        <button class="back-to-store-btn">&larr; Volver a la Tienda</button>
+        <h2>Gestión de Mis Pedidos</h2>
+        <p>Revisa el estado de tus pedidos y actualiza su progreso.</p>
+        <div class="order-list">
+            <div class="order-card">
+                <h4>Pedido #2023001 - Cliente: María V.</h4>
+                <p>Fecha: 2025-06-20 | Total: Bs. 370</p>
+                <p>Estado: <span class="status-pending">Pendiente</span></p>
+                <ul>
+                    <li>1x Tejido de Alpaca</li>
+                    <li>1x Aretes de Plata</li>
+                </ul>
+                <div class="card-actions">
+                    <button class="update-status-btn">Actualizar Estado</button>
+                    <button class="view-details-btn">Ver Detalles</button>
+                </div>
+            </div>
+            <div class="order-card">
+                <h4>Pedido #2023002 - Cliente: Juan R.</h4>
+                <p>Fecha: 2025-06-18 | Total: Bs. 90</p>
+                <p>Estado: <span class="status-completed">Completado</span></p>
+                <ul>
+                    <li>1x Vasija de Cerámica</li>
+                </ul>
+                <div class="card-actions">
+                    <button class="update-status-btn">Actualizar Estado</button>
+                    <button class="view-details-btn">Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
